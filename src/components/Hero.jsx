@@ -51,7 +51,7 @@ const Hero = ({ movies, loading }) => {
                 <h1 className="text-white mt-[2px] p-0 leading-[27px] text-lg font-medium sm:text-xl sm:leading-[30px]sm:font-medium xl:text-2xl xl:font-medium sm:mt-[4px] xl:mt-2">{movie.title}</h1>
               </div>
               <div className="flex gap-2 items-center flex-wrap">
-                {movie.genre_ids.map((genre, index) => (
+                {movie?.genre_ids.map((genre, index) => (
                   <div className="flex items-center gap-2" key={index}>
                     <span className="text-xs md:text-base font-medium text-white">{genres[genre]}</span>
                     {index !== movie.genre_ids.length - 1 && <span className="w-[4px] h-[4px] md:w-[6px] md:h-[6px] bg-white/70 rounded-full"></span>}

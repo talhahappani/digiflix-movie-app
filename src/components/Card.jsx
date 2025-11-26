@@ -20,10 +20,10 @@ const Card = ({ movie, isTv }) => {
       </div>
       <div className="flex items-center gap-2 mt-1 md:mt-2">
         <p className="text-xs md:text-sm xl:text-base font-medium text-[#bcbcbc]">{year}</p>
-        {movie.vote_average > 0 && <span className="text-xs md:text-sm xl:text-base font-medium text-[#bcbcbc]"> {movie.vote_average?.toFixed(1)} / 10</span>}
+        {movie?.vote_average > 0 && <span className="text-xs md:text-sm xl:text-base font-medium text-[#bcbcbc]"> {movie?.vote_average?.toFixed(1)} / 10</span>}
       </div>
       <div className="flex gap-2 items-center flex-wrap">
-        {movie.genre_ids.map((genre, index) =>
+        {movie.genre_ids?.map((genre, index) =>
           index < 3 ? (
             <div className="flex items-center gap-2" key={index}>
               <span className="text-[10px] md:text-sm xl:text-base font-medium text-[#bcbcbc]">{genres[genre]}</span>
