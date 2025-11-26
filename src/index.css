@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        font-family: 'Lato', sans-serif;
+    }
+    body {
+      @apply bg-[#141414;] flex min-h-screen flex-col items-center justify-center m-0 text-lg overflow-x-hidden
+    }
+    .scrollbar-none {
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+    .scrollbar-none::-webkit-scrollbar {
+      display: none;
+    }
+    .custom-background {
+      background: linear-gradient(77deg, rgba(0, 0, 0, 0.6), transparent 85%);
+    }
+    .custom-background-2 {
+      background: linear-gradient(0deg, #181818, transparent 50%);
+    }
+    .custom-background-3 {
+      background: linear-gradient(77deg, rgba(0, 0, 0, .6), transparent 85%);
+    }
+  }
